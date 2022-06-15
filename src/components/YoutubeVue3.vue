@@ -16,6 +16,7 @@ export default {
     loop: { type: Number, default: 1, validator: (v) => Number(v) === 0 || Number(v) === 1 },
     controls: { type: Number, default: 0, validator: (v) => Number(v) === 0 || Number(v) === 1 },
     modestbranding: { type: Number, default: 1, validator: (v) => Number(v) === 0 || Number(v) === 1 },
+    start: {type: Number, default:0}
   },
   data() {
     return {
@@ -33,6 +34,7 @@ export default {
       controls: this.controls,
       modestbranding: this.modestbranding,
       playlist: this.video_id,
+      start: this.start,
     };
 
     this.player = YouTubePlayer(this.playerid, {

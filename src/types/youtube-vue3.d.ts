@@ -7,5 +7,6 @@ declare module "youtube-vue3" {
     loop?: Number; // default value : 0
     controls?: Number; //default value: 0
     modestbranding?: Number; //default value: 1
+    start?: Number;
   }>;
 }

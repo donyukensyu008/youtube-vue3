@@ -53,12 +53,12 @@
     "cpy-cli": "^4.0.0",
     "shortid": "^2.2.16",
     "vue": "^3.2.31",
+    "yarn": "^1.22.19",
     "youtube-player": "^5.5.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-plugin-babel": "^5.0.4",
+    "@vue/cli-service": "^5.0.4",
     "@vue/compiler-sfc": "^3.0.4",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
