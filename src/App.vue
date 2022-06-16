@@ -3,7 +3,6 @@
     <div>
       video_id : <input type="text" v-model="temp.video_id" /><br />
       loop : <input type="number" v-model.number="temp.loop" /><br />
-      start : <input type="number" v-model.number="temp.start" /><br />
       <button @click="applyConfig">Apply</button>
       <button @click="playCurrentVideo">Play</button>
       <button @click="stopCurrentVideo">Stop</button>
@@ -18,7 +17,7 @@
       :height="480"
       :modestbranding="1"
       :controls="1"
-      :start="play.start"
+      :start="15"
       @ended="onEnded"
       @paused="onPaused"
       @played="onPlayed"
@@ -33,8 +32,8 @@ export default {
   name: "App",
   data() {
     return {
-      temp: { video_id: "3P1CnWI62Ik", loop: 1 , start: 0},
-      play: { video_id: "3P1CnWI62Ik", loop: 1 , start: 0},
+      temp: { video_id: "3P1CnWI62Ik", loop: 1 },
+      play: { video_id: "3P1CnWI62Ik", loop: 1 },
     };
   },
   components: {
@@ -43,7 +42,6 @@ export default {
   methods: {
     applyConfig() {
       this.play = Object.assign(this.play, this.temp);
-      console.log(this.play);
     },
     playCurrentVideo() {
       this.$refs.youtube.player.playVideo();
