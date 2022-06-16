@@ -45,6 +45,8 @@ export default {
       playerVars: playerVars,
     });
 
+   
+
     this.player.on("stateChange", (e) => {
       if (e.data === window.YT.PlayerState.ENDED) {
         this.$emit("ended");
@@ -61,7 +63,7 @@ export default {
   },
   watch: {
     videoid() {
-      this.player.loadVideoById(this.videoid);
+      this.player.loadVideoById({videoId: this.videoid, startSeconds: this.start});
       this.player.playVideo();
     },
     list() {
